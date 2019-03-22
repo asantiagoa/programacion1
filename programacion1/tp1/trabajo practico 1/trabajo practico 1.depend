@@ -3,3 +3,13 @@
 	<stdio.h>
 	<stdlib.h>
 
+1553222972 source:c:\users\god\desktop\3\programacion1\programacion1\tp1\trabajo practico 1\libcalc.c
+	"libCalc.h"
+
+1553223128 c:\users\god\desktop\3\programacion1\programacion1\tp1\trabajo practico 1\libcalc.h
+
+1553222391 source:c:\users\god\desktop\3\programacion1\programacion1\tp1\trabajo practico 1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"libCalc.h"
+
