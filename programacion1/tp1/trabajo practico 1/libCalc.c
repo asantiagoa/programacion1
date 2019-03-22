@@ -1,29 +1,34 @@
 #include "libCalc.h"
-
+#include <stdio.h>
+#include <stdlib.h>
 
 int calcSum(int x, int y)   //función para la operación de suma.
 {
     int totalSum;   //se declara la variable que tomará el valor del total de la suma.
     totalSum = x + y;   // se suman los dos números que el usuario ingresa y el resultado se asigna a la variable totalSum.
     printf("el resultado de la suma es: %d \n", totalSum);  //se imprime el resultado
-}
+    return 0;//return 0 indica que la función se completa de manera exitosa.Mismo uso en todas las funciones
+    }
 int calcRes(int x, int y)   //funcion para la operación de resta.
 {
     int totalRes;   //se declara la variable que tomará el valor del total de la resta.
     totalRes = x - y;   //se restan los dos números que el usuario ingresa y el resultado se asigna a la variable totalRes.
     printf("el resultado de la resta es: %d \n", totalRes); //se imprime el resultado
+    return 0;
 }
 int calcMult(int x, int y)  //función para la operación de multiplicacion.
 {
     int totalMult;  //se declara la variable que tomará el valor del total de la multiplicación.
     totalMult = x * y;  //se multiplican los dos números que el usuario ingresa y el resultado se asigna a la variable totalMult.
     printf("el resultado de la multiplicacion es: %d \n", totalMult);   //se imprime el resultado
+    return 0;
 }
 int calcDiv(int x, int y)  //función para la operación de división.
 {
     float totalDiv;   //se declara la variable que tomará el valor del total de la división. el tipo float indica que la variable tomará un valor flotante, es decir, un número real.
     totalDiv = (float)x / y;   //se transforman los números ingresados por el usuario a flotantes y se divide el primer número por el segundo. el resultado se asigna a la variable totalDiv.
-    printf("el resultado de la division es: %.2f \n", totalDiv);  //se imprime el resultado. %.2f limita los decimales a 2
+    printf("el resultado de la division es: %.2f \n", totalDiv);  //se imprime el resultado. %.2f limita los decimales a 2.
+    return 0;
 }
 int calcFact(int x, int y)  //función para la operación de factorial.
 {
@@ -40,6 +45,7 @@ int calcFact(int x, int y)  //función para la operación de factorial.
     {
         factNum2 = factNum2 * i2;
     }
-    printf("el factorial de %d es: %d\n",x , factNum1);    //se imprime el resultado.
-    printf("el factorial de %d es: %d\n",y , factNum2);    //se imprime el resultado.
+    printf("el factorial de %d es: %d \n",x , factNum1);    //se imprime el resultado.
+    printf("el factorial de %d es: %d \n",y , factNum2);    //se imprime el resultado.
+    return 0;
 }

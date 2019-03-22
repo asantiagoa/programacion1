@@ -4,10 +4,15 @@
 int main()
 {
     int num1, num2, operacion;
+    //long int numLong1, numLong2;
     printf("ingrese el primer numero: ");
     scanf("%d", &num1);
+    //numLong1 = (long int)num1;
+    fflush(stdin);
     printf("ingrese el segundo numero: ");
     scanf("%d", &num2);
+    //numLong2 = (long int)num2;
+    fflush(stdin);
     printf("ingrese el numero correspondiente a la operacion que desa realizar?\nsuma:1\nresta:2\nmultiplicacion:3\ndivision:4\nfactorial:5\n");
     fflush(stdin);
     scanf("%d", &operacion);
