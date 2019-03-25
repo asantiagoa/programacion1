@@ -3,7 +3,7 @@
 #include "libCalc.h"
 int main()
 {
-    int num1, num2, operacion;
+    int num1, num2, operacion, resultado;
     //long int numLong1, numLong2;
     printf("ingrese el primer numero: ");
     scanf("%d", &num1);
@@ -17,44 +17,49 @@ int main()
     fflush(stdin);
     scanf("%d", &operacion);
 
-    switch(operacion)
+    switch(operacion)//
     {
-        case 1:
+        case 1://caso de suma. llama a la funcion calcSum
             {
-                calcSum(num1, num2);
                 fflush(stdin);
+                resultado = calcSum(num1, num2);
+                printf("%d\n",resultado);
                 system(("pause"));
                 break;
             }
-        case 2:
+        case 2://caso de resta. llama a la funcion calcRes
             {
-                calcRes(num1, num2);
                 fflush(stdin);
+                resultado = calcRes(num1, num2);
+                printf("%d\n",resultado);
                 system(("pause"));
                 break;
             }
-        case 3:
+        case 3://caso de multiplicacion. llama a la funcion calcMult
             {
-                calcMult(num1, num2);
                 fflush(stdin);
+                resultado = calcMult(num1, num2);
+                printf("%d\n",resultado);
                 system(("pause"));
                 break;
             }
-        case 4:
+        case 4://caso de division. llama a la funcion calcDiv
             {
-                calcDiv(num1, num2);
                 fflush(stdin);
+                resultado = calcDiv(num1, num2);
+                printf("%.2f\n",(float)resultado);
                 system(("pause"));
                 break;
             }
-        case 5:
+        case 5://caso de factorial. llama a la funcion calcFact
             {
-                calcFact(num1, num2);
                 fflush(stdin);
+                resultado = calcFact(num1, num2);
+                printf("%d\n",resultado);
                 system(("pause"));
                 break;
             }
-        default:
+        default://default en caso de entrada invalida
             {
                 printf("no es una entrada valida\n");
                 fflush(stdin);
