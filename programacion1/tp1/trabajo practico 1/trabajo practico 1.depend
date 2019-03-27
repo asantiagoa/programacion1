@@ -25,14 +25,14 @@
 	<stdio.h>
 	<stdlib.h>
 
-1553530818 source:c:\users\alumno\desktop\programacion1\programacion1\tp1\trabajo practico 1\libcalc.c
+1553704275 source:c:\users\alumno\desktop\programacion1\programacion1\tp1\trabajo practico 1\libcalc.c
 	"libCalc.h"
 	<stdio.h>
 	<stdlib.h>
 
-1553531222 c:\users\alumno\desktop\programacion1\programacion1\tp1\trabajo practico 1\libcalc.h
+1553701164 c:\users\alumno\desktop\programacion1\programacion1\tp1\trabajo practico 1\libcalc.h
 
-1553529478 source:c:\users\alumno\desktop\programacion1\programacion1\tp1\trabajo practico 1\main.c
+1553705124 source:c:\users\alumno\desktop\programacion1\programacion1\tp1\trabajo practico 1\main.c
 	<stdio.h>
 	<stdlib.h>
 	"libCalc.h"

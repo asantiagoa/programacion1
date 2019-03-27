@@ -22,27 +22,22 @@ int calcMult(int x, int y)  //función para la operación de multiplicacion.
 }
 float calcDiv(int x, int y)  //función para la operación de división.
 {
+    while(y==0)
+    {
+        printf("no se puede dividir por 0, ingrese otro numero: ");
+        scanf("%d",&y);
+    }
     float totalDiv;   //se declara la variable que tomará el valor del total de la división. el tipo float indica que la variable tomará un valor flotante, es decir, un número real.
-    totalDiv = (float)x / y;   //se transforman los números ingresados por el usuario a flotantes y se divide el primer número por el segundo. el resultado se asigna a la variable totalDiv.
-    //printf("el resultado de la division es: %.2f \n", totalDiv);  //se imprime el resultado. %.2f limita los decimales a 2.
+    totalDiv = (float)x / (float)y;   //se transforman los números ingresados por el usuario a flotantes y se divide el primer número por el segundo. el resultado se asigna a la variable totalDiv.
     return totalDiv;
 }
-int calcFact(int x, int y)  //función para la operación de factorial.
+unsigned long long int calcFact(unsigned long long int x)  //función para la operación de factorial.
 {
-    int i1;
-    int factNum1 = 1;   //se declaran las variables a usar. i1 funciona como contador de la cantidad de iteraciones y factNum1 devolverá el factorial del primer número ingresado
-       //se inicializa factNum1 en 1 para que en el bucle siguiente se multiplique por el contador.
+    int i1;//se declaran las variables a usar. i1 funciona como contador de la cantidad de iteraciones y factNum1 devolverá el factorial del primer número ingresado
+    unsigned long long int factNum1 = 1;   //se inicializa factNum1 en 1 para que en el bucle siguiente se multiplique por el contador.
     for(i1=1;i1<=x;i1++)    //se inicializa el contador en 1 ya que si se inicializara en 0 devolvería (factNum1 = factNum1 * 0) en la primera iteración y de la segunda en adelnte (0 = 0 * 1,2,3,etc). el bucle se repite una cantidad de veces igual al número ingresado por el usuario.
     {
-        factNum1 = factNum1 * i1;   //ejemplo con numero 3 ingresado por el usuario-> 1°era iteracion: factNum1 = 1*1 | 2°da iteración: factNum1 = 1*2 | 3°era y ultima iteración: factNum1 = 2*3
+        factNum1 = factNum1 * (unsigned long long)i1;   //ejemplo con numero 3 ingresado por el usuario-> 1°era iteracion: factNum1 = 1*1 | 2°da iteración: factNum1 = 1*2 | 3°era y ultima iteración: factNum1 = 2*3
     }
-    int i2; //se declaran las variables para el segundo número. el bucle funciona de la misma manera que el primero.
-    int factNum2 = 1;
-    for(i2=1;i2<=y;i2++)
-    {
-        factNum2 = factNum2 * i2;
-    }
-    printf("el factorial de %d es: %d \n",x , factNum1);    //se imprime el resultado.
-    printf("el factorial de %d es: %d \n",y , factNum2);    //se imprime el resultado.
-    return 0;
+    return factNum1;
 }
