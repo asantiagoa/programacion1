@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "libCalc.h"
-//NO HACE FALTA USAR LONG O LONG LONG EN FACTORIAL
 int main()
 {
     float num1, num2;
@@ -12,9 +11,9 @@ int main()
     int flag;
     //int updater=0;
     int switchControl;
-    printf("que hacer\n1: Ingresar primer operando(%.2f)\n2: Ingresar segundo operando(%.2f)\n3: Calcular todas las operaciones\n4: Mostrar resultados\n5: Salir\n",num1, num2);
     do
     {
+        printf("que hacer\n1: Ingresar primer operando(%.2f)                    2: Ingresar segundo operando(%.2f)\n3: Calcular todas las operaciones                    4: Mostrar resultados\n5: Salir\n",num1, num2);
         flag = 0;
         fflush(stdin);
         scanf("%d",&switchControl);
@@ -59,11 +58,12 @@ int main()
                     printf("el resultado de la multiplicacion entre %.2f y %.2f es: %.2f\n",num1 ,num2 ,resMult);
                     printf("el cociente de la division entre %.2f y %.2f es: %.2f\n",num1 ,num2 ,resDiv);
                     printf("el factorial de %.0f es: %d",num1 ,resFact);
-                    flag = 0;
+                    break;
                 }
                 else
                 {
                     printf("error, debe realizar los calculos antes de mostrar los resultados.\n");
+                    break;
                 }
                 break;
             }
@@ -76,7 +76,6 @@ int main()
                 fflush(stdin);
                 printf("entrada invalida, ingrese una de las opciones mostradas en el menu: ");
                 scanf("%d",&switchControl);
-                break;
             }
         }
     }while(switchControl!=5);

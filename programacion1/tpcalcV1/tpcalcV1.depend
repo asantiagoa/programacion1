@@ -11,3 +11,15 @@
 	<stdlib.h>
 	"libCalc.h"
 
+1554137829 source:c:\users\alumno\desktop\programacion1\programacion1\tpcalcv1\libcalc.c
+	"libCalc.h"
+	<stdio.h>
+	<stdlib.h>
+
+1554128900 c:\users\alumno\desktop\programacion1\programacion1\tpcalcv1\libcalc.h
+
+1554137621 source:c:\users\alumno\desktop\programacion1\programacion1\tpcalcv1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"libCalc.h"
+

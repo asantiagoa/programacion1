@@ -22,14 +22,17 @@ float calcMult(float x, float y)  //función para la operación de multiplicacion.
 }
 float calcDiv(float x, float y)  //función para la operación de división.
 {
-    while(y==0)
+    if(y==0)
     {
-        printf("no se puede dividir por 0, ingrese otro numero: ");
-        scanf("%f",&y);
+        printf("no se puede dividir por 0\n");
     }
+    else
+    {
     float totalDiv;   //se declara la variable que tomará el valor del total de la división. el tipo float indica que la variable tomará un valor flotante, es decir, un número real.
-    totalDiv = (float)x / (float)y;   //se transforman los números ingresados por el usuario a flotantes y se divide el primer número por el segundo. el resultado se asigna a la variable totalDiv.
+    totalDiv = x / y;   //se transforman los números ingresados por el usuario a flotantes y se divide el primer número por el segundo. el resultado se asigna a la variable totalDiv.
     return totalDiv;
+    }
+
 }
 int calcFact(float x)  //función para la operación de factorial.
 {
