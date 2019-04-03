@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1554303790 source:c:\users\alumno\desktop\programacion1\programacion1\fgets\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
