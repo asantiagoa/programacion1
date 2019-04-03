@@ -9,12 +9,12 @@ int main()
     float resSum, resRest, resMult, resDiv;
     int resFact;
     int flag;
+    flag = 0;
     //int updater=0;
     int switchControl;
     do
     {
         printf("que hacer\n1: Ingresar primer operando(%.2f)                    2: Ingresar segundo operando(%.2f)\n3: Calcular todas las operaciones                    4: Mostrar resultados\n5: Salir\n",num1, num2);
-        flag = 0;
         fflush(stdin);
         scanf("%d",&switchControl);
         switch(switchControl)
@@ -57,12 +57,12 @@ int main()
                     printf("el resultado de la resta entre %.2f y %.2f es: %.2f\n",num1 ,num2 ,resRest);
                     printf("el resultado de la multiplicacion entre %.2f y %.2f es: %.2f\n",num1 ,num2 ,resMult);
                     printf("el cociente de la division entre %.2f y %.2f es: %.2f\n",num1 ,num2 ,resDiv);
-                    printf("el factorial de %.0f es: %d",num1 ,resFact);
+                    printf("el factorial de %.0f es: %d\n\n\n",num1 ,resFact);
                     break;
                 }
                 else
                 {
-                    printf("error, debe realizar los calculos antes de mostrar los resultados.\n");
+                    printf("error, debe realizar los calculos antes de mostrar los resultados.\n\n");
                     break;
                 }
                 break;

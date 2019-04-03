@@ -6,33 +6,37 @@ float calcSum(float x, float y)   //función para la operación de suma.
 {
     float totalSum;   //se declara la variable que tomará el valor del total de la suma.
     totalSum = x + y;   // se suman los dos números que el usuario ingresa y el resultado se asigna a la variable totalSum.
+    printf("suma realizada correctamente\n");
     return totalSum;    //return totalSum devuelve el valor de la variable totalSum cuando se llama la funcion.
 }
 float calcRes(float x, float y)   //funcion para la operación de resta.
 {
     float totalRes;   //se declara la variable que tomará el valor del total de la resta.
     totalRes = x - y;   //se restan los dos números que el usuario ingresa y el resultado se asigna a la variable totalRes.
+    printf("resta realizada correctamente\n");
     return totalRes;    //return totalRes devuelve el valor de la variable totalRes cuando se llama la funcion.
 }
 float calcMult(float x, float y)  //función para la operación de multiplicacion.
 {
     float totalMult;  //se declara la variable que tomará el valor del total de la multiplicación.
     totalMult = x * y;  //se multiplican los dos números que el usuario ingresa y el resultado se asigna a la variable totalMult.
+    printf("multiplicacion realizada correctamente\n");
     return totalMult;   //
 }
 float calcDiv(float x, float y)  //función para la operación de división.
 {
+    float totalDiv;
     if(y==0)
     {
         printf("no se puede dividir por 0\n");
     }
     else
     {
-    float totalDiv;   //se declara la variable que tomará el valor del total de la división. el tipo float indica que la variable tomará un valor flotante, es decir, un número real.
+    //se declara la variable que tomará el valor del total de la división. el tipo float indica que la variable tomará un valor flotante, es decir, un número real.
     totalDiv = x / y;   //se transforman los números ingresados por el usuario a flotantes y se divide el primer número por el segundo. el resultado se asigna a la variable totalDiv.
-    return totalDiv;
+    printf("division realizada correctamente\n");
     }
-
+    return totalDiv;
 }
 int calcFact(float x)  //función para la operación de factorial.
 {
@@ -42,5 +46,6 @@ int calcFact(float x)  //función para la operación de factorial.
     {
         factNum1 = factNum1 * i1;   //ejemplo con numero 3 ingresado por el usuario-> 1°era iteracion: factNum1 = 1*1 | 2°da iteración: factNum1 = 1*2 | 3°era y ultima iteración: factNum1 = 2*3
     }
+    printf("division realizada correctamente\n");
     return factNum1;
 }
