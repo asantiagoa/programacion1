@@ -16,6 +16,7 @@ int main()
         printf("Ingrese el numero correspondiente a la operacion que desea realizar\n1: Ingresar primer operando(%.2f)          2: Ingresar segundo operando(%.2f)\n3: Calcular todas las operaciones          4: Mostrar resultados\n5: Salir\n",num1, num2);
         fflush(stdin);
         scanf("%d",&switchControl);
+        printf("\n");
         switch(switchControl)
         {
 
@@ -24,6 +25,7 @@ int main()
                 fflush(stdin);
                 printf("ingrese el primer operando: ");
                 scanf("%f",&num1);
+                printf("\n");
                 break;
             }
 
@@ -32,6 +34,7 @@ int main()
                 fflush(stdin);
                 printf("ingrese el segundo operando: ");
                 scanf("%f",&num2);
+                printf("\n");
                 break;
             }
 
@@ -79,7 +82,7 @@ int main()
                     }
                     else
                     {
-                        printf("el factorial de %.0f es: %d, y el factorial de %0.f es: %d\n\n\n",num1, resFact1, num2, resFact2);
+                        printf("el factorial de %d es: %d, y el factorial de %d es: %d\n\n\n",(int)num1, resFact1, (int)num2, resFact2);
                     }
                 }
                 else
