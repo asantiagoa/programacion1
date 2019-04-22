@@ -1,8 +1,10 @@
 # depslib dependency file v1.0
-1555341032 source:c:\users\alumno\desktop\programacion1\programacion1\abm empleados\main.c
+1555956102 source:c:\users\alumno\desktop\programacion1\programacion1\abm empleados\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<ctype.h>
 	<conio.h>
+
+1555953191 c:\users\alumno\desktop\programacion1\programacion1\abm empleados\libabm.h
 

@@ -18,9 +18,23 @@ pido legajo->me fijo si esta<                                   confirmo->pasamo
 #include <conio.h>
 
 #define TAM 2
+#define TAMSEC 4
 
 
 
+
+typedef struct
+{
+    int dia;
+    int mes;
+    int anio;
+}eFecha;
+
+typedef struct
+{
+    int id;
+    char descripcion[20];
+}eSector;
 
 typedef struct//struct datosEmpleados
 {
@@ -28,28 +42,35 @@ typedef struct//struct datosEmpleados
     char nombre[20];
     char sexo;
     int sueldo;
+    int sectorId;
+    //eFecha fechaDeIngreso;
     int estado;
 }eDatosEmpleados;
 
+
 void inicializarEstado(eDatosEmpleados x[], int tam);
-void mostrarEmpleado(eDatosEmpleados empl);
-void mostrarEmpleados(eDatosEmpleados empls[], int tam);
+void mostrarEmpleado(eSector sect[], int tam, eDatosEmpleados empl);
+void mostrarEmpleados(eSector sect[], int tamsec, eDatosEmpleados empls[], int tam);
 int buscarLibre(eDatosEmpleados x[], int tam);
-void altaEmpleado()
-void bajaEmpleado()
+void altaEmpleado(eDatosEmpleados x[], int tam, eSector sec[], int tamSec);
+void bajaEmpleado(eDatosEmpleados x[], int tam, eSector sec[], int tamSec);
+int obtenerSector(eSector sect[], int tam, int id, char desc[]);
+void mostrarSectoresConEmpleados(eDatosEmpleados empl[], int tam, eSector sect[], int tamSec);
+void mostrarCantEmplXSector(eDatosEmpleados empl[], int tam, eSector sect[], int tamSec);
 
 int main()
 {
-    eDatosEmpleados lista[TAM]={{1111, "sdf", 'm', 123123, 1}, {2222, "sjhh", 'f', 234234234, 1}};
+
+    eDatosEmpleados lista[TAM]={{1111, "sdf", 'm', 123123, 1, 1}, {2222, "sjhh", 'f', 234234234, 1, 1}};
+    eSector sectores[TAMSEC]={{1, "sistemas"},{2, "RRHH"},{3, "gerencia"},{4, "sector4"}};
     //inicializarEstado(lista, TAM);
     int menu;
     char salida = 'n';
-    int i;
 
     do
     {
     system("cls");
-    printf("1-Alta empleado. \n2-Baja Empleado. \n3-Modificacion empleado. \n4-Listar. \n5-Ordenar. \n6-Salir.");
+    printf("1-Alta empleado. \n2-Baja Empleado. \n3-Modificacion empleado. \n4-Listar. \n5-Ordenar. \n6-Mostrar sectores con empleados. \n7-Salir.");
     printf("\nIngrese opcion: ");
     fflush(stdin);
     scanf("%d", &menu);
@@ -75,7 +96,8 @@ int main()
         case 4:
         {
             printf("\nlistar");
-            mostrarEmpleados(lista, TAM);
+            mostrarEmpleados(sectores, 4, lista, TAM);
+                system("pause");
             break;
         }
         case 5:
@@ -84,6 +106,13 @@ int main()
             break;
         }
         case 6:
+        {
+            mostrarSectoresConEmpleados(lista, TAM, sectores, TAMSEC);
+            mostrarCantEmplXSector(lista, TAM, sectores, TAMSEC);
+            system("pause");
+            break;
+        }
+        case 7:
         {
             printf("\ndesea salir? (s/n): ");
             fflush(stdin);
@@ -104,6 +133,7 @@ int main()
     return 0;
 }
 
+
 void inicializarEstado(eDatosEmpleados x[], int tam)
 {
     int i;
@@ -116,19 +146,26 @@ void inicializarEstado(eDatosEmpleados x[], int tam)
 
 }
 
-void mostrarEmpleado(eDatosEmpleados empl)
+
+
+void mostrarEmpleado(eSector sect[], int tam, eDatosEmpleados empl)
 {
-    printf("%d  %10s  %c %10d \n", empl.legajo, empl.nombre, empl.sexo, empl.sueldo);
+    char nombreSector[20];
+    obtenerSector(sect, TAMSEC, empl.sectorId, nombreSector);
+    printf("%d  %10s  %c %10d %s \n", empl.legajo, empl.nombre, empl.sexo, empl.sueldo, nombreSector);
 }
 
-void mostrarEmpleados(eDatosEmpleados empls[], int tam)
+
+
+
+void mostrarEmpleados(eSector sect[], int tamsec, eDatosEmpleados empls[], int tam)
 {
     int i;
     for(i=0; i<tam; i++)
     {
         if(empls[i].estado==1)
         {
-            mostrarEmpleado(empls[i]);
+            mostrarEmpleado(sect,4, empls[i]);
         }
 
     }
@@ -136,13 +173,15 @@ void mostrarEmpleados(eDatosEmpleados empls[], int tam)
 }
 
 
-void altaEmpleado(eDatosEmpleados x[], int tam)
+
+
+void altaEmpleado(eDatosEmpleados x[], int tam, eSector sec[], int tamSec)
 {
     int indice;
     int legajo;
     int esta;
 
-            if(indice!=-1))
+            if(indice!=-1)
             {
                 printf(" ingrese legajo");
                 scanf("%d", &legajo);
@@ -150,7 +189,7 @@ void altaEmpleado(eDatosEmpleados x[], int tam)
                 if(esta!=-1)
                 {
                     printf("existe un empleado con ese legajo");
-                    mostrarEmpleado(x[esta]);
+                    //mostrarEmpleado(x[esta]);
                 }
                 else
                 {
@@ -172,6 +211,8 @@ void altaEmpleado(eDatosEmpleados x[], int tam)
             }
 }
 
+
+
 int buscarLibre(eDatosEmpleados x[], int tam)
 {
     int i;
@@ -187,6 +228,9 @@ int buscarLibre(eDatosEmpleados x[], int tam)
     }
     return indiceLibre;
 }
+
+
+
 int buscarEmpleado(eDatosEmpleados x[], int tam, int legajo)
 {
     int i;
@@ -201,6 +245,65 @@ int buscarEmpleado(eDatosEmpleados x[], int tam, int legajo)
 
     }
 }
+
+
+
+
+int obtenerSector(eSector sect[], int tam, int id, char desc[])
+{
+    int todoOk = 0;
+    int i;
+    for(i=0;i<tam;i++)
+    {
+        if (id==sect[i].id)
+        {
+            strcpy(desc, sect[i].descripcion);
+            todoOk =1;
+            break;
+
+        }
+    }
+    return todoOk;
+
+}
+void mostrarSectoresConEmpleados(eDatosEmpleados empl[], int tam, eSector sect[], int tamSec)
+{
+    int i;
+    int j;
+    for(i=0; i<tamSec;i++)
+    {
+        printf("Sector: %s\n\n",sect[i].descripcion);
+        for(j=0; j<tam;j++)
+        {
+            if((empl[j].sectorId == sect[i].id)&&(empl[j].estado==1))
+            {
+                mostrarEmpleado(sect, tamSec, empl[j]);
+            }
+        }
+    }
+
+}
+void mostrarCantEmplXSector(eDatosEmpleados empl[], int tam, eSector sect[], int tamSec)
+{
+    int contador;
+    int i;//sect
+    int j;//empl
+    for(i=0;i<tamSec;i++)
+    {
+        contador =0;
+        printf("sector: %s\n\n",sect[i].descripcion);
+        for(j=0;j<tam;j++)
+        {
+            if((sect[i].id == empl[j].sectorId) && (empl[j].estado==1))
+            {
+                contador++;
+            }
+        }
+        printf("%d",contador);
+    }
+}
+
+
 
 
 
