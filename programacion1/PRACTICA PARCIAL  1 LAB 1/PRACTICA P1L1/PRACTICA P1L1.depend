@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1556129176 source:c:\users\alumno\desktop\programacion1\programacion1\practica parcial  1 lab 1\practica p1l1\empleado.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"empleado.h"
+	"empleado.h"
+
+1556129062 c:\users\alumno\desktop\programacion1\programacion1\practica parcial  1 lab 1\practica p1l1\empleado.h
+
+1556130087 source:c:\users\alumno\desktop\programacion1\programacion1\practica parcial  1 lab 1\practica p1l1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"empleado.h"
+

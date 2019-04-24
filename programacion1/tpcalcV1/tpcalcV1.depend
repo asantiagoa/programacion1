@@ -11,14 +11,14 @@
 	<stdlib.h>
 	"libCalc.h"
 
-1555946950 source:c:\users\alumno\desktop\programacion1\programacion1\tpcalcv1\libcalc.c
+1556123187 source:c:\users\alumno\desktop\programacion1\programacion1\tpcalcv1\libcalc.c
 	"libCalc.h"
 	<stdio.h>
 	<stdlib.h>
 
-1555946950 c:\users\alumno\desktop\programacion1\programacion1\tpcalcv1\libcalc.h
+1556123187 c:\users\alumno\desktop\programacion1\programacion1\tpcalcv1\libcalc.h
 
-1555946950 source:c:\users\alumno\desktop\programacion1\programacion1\tpcalcv1\main.c
+1556123187 source:c:\users\alumno\desktop\programacion1\programacion1\tpcalcv1\main.c
 	<stdio.h>
 	<stdlib.h>
 	"libCalc.h"
