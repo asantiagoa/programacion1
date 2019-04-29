@@ -67,6 +67,50 @@ int menuAlmuerzo()
 
 
 
+void altaEmpleado(eEmpleado vecEmpl[], int tamEmpl, eSector vecSec[], int tamSec)
+{
+
+    int i;
+    int j;
+    int indice = buscarIndiceLibre(vecEmpl, tamEmpl)
+    int legajo;
+    int existe;
+
+    if (indice == -1)
+    {
+        printf("no hay indice libre");
+    }
+    else
+    {
+        printf("\ningrese legajo:");
+        legajo = scanf("%d", &legajo);
+        existeLegajo()
+
+
+    }
+}
+
+int buscarIndiceLibre(eEmpleado vecEmpl[], int tam)
+{
+    int indice = -1;
+    int i;
+    for(i=0; i<TAM; i++)
+    {
+        if(vecEmpl[i].ocupado==0)
+        {
+            indice = i;
+            break;
+        }
+    }
+    return indice;
+
+}
+
+int existeLegajo(eEmpleado vecEmpl, int tamEmpl, int legajo)
+{
+
+}
+
 
 #include "empleado.h"
 

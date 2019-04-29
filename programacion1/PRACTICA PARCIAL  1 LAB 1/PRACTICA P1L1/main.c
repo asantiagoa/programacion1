@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
 #include "empleado.h"
 
@@ -7,8 +8,9 @@
 #define TAMMENU 10
 int main()
 {
-    eMenu listaMenu[TAMMENU];
-    eSector listaSector[TAMSEC];
+    eEmpleado lista[TAM];
+    eMenu listaMenu[TAMMENU]={{1, "SOPA"},{2,"MILANESAS"},{3,"ENSALADA"},{4,"BORSCH"},{5,"SUSHI"},{6,"PAN"},{7,"PIZZA"},{8,"CARNE"},{9,"POLLO"},{10,"ARROZ"}};
+    eSector listaSector[TAMSEC]={{1, "SISTEMAS"},{2, "RRHH"},{3, "VENTAS"},{4, "COMPRAS"}, {5, "LEGALES"}};
     char salir='n';
     do
     {
@@ -21,25 +23,22 @@ int main()
                     case 1:
                     {
                         printf("\nAlta empleado\n\n");
-                        //altaEmpleado(lista, TAM, sectores, TAMSEC);
+                        altaEmpleado(lista, TAM, listaSector, TAMSEC);
                         system("pause");
                         break;
                     }
-
                     case 2:
                     {
                         printf("\nModificar empleado\n\n");
                         system("pause");
                         break;
                     }
-
                     case 3:
                     {
                         printf("\nBaja empleado\n\n");
                         system("pause");
                         break;
                     }
-
                     case 4:
                     {
                         printf("\nListar empleados\n\n");
@@ -56,8 +55,6 @@ int main()
                         printf("\nopcion invalida\n");
                         break;
                     }
-
-
                 }
                 break;
             }

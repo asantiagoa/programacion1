@@ -45,4 +45,7 @@ int menuEmpleados();
 int menuMenu();
 int menuAlmuerzo();
 
+int buscarIndiceLibre(eEmpleado vecEmpl[], int TAM);
+void altaEmpleado(eEmpleado vecEmpl[], int tamEmpl, eSector vecSec[], int tamSec);
+
 #endif
