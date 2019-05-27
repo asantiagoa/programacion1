@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1558964565 source:c:\users\alumno\desktop\programacion1\programacion1\archivos\filealgo\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
