@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1559567406 source:c:\users\alumno\desktop\programacion1\programacion1\archivos\guardarbinario\main.c
+	<stdio.h>
+	<stdlib.h>
+
