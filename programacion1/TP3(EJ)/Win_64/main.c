@@ -17,7 +17,19 @@
      9. Guardar los datos de los empleados en el archivo data.csv (modo binario).
     10. Salir
 *****************************************************/
+/*
+1)
+while feof()
+{
+fscanf(); , fread() en el 2)
+newEmpl;
+ll_add;
 
+}
+ll_get(), punto 4)
+ll_remove()-> elimina y compacta
+for(i=0;i<ll_len();i++)
+*/
 
 int main()
 {
@@ -29,6 +41,9 @@ int main()
             case 1:
                 controller_loadFromText("data.csv",listaEmpleados);
                 break;
+
+            case 2:
+                controller_loadFromBinary("data.csv", listaEmpleados);
         }
     }while(option != 10);
     return 0;

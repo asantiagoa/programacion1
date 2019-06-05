@@ -53,13 +53,32 @@
 	"LinkedList.h"
 	"Employee.h"
 
-1559571753 source:c:\users\alumno\desktop\programacion1\programacion1\tp3(ej)\win_64\controller.c
+1559745493 source:c:\users\alumno\desktop\programacion1\programacion1\tp3(ej)\win_64\controller.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"
 	"Employee.h"
 
-1559571753 c:\users\alumno\desktop\programacion1\programacion1\tp3(ej)\win_64\linkedlist.h
+1559745493 c:\users\alumno\desktop\programacion1\programacion1\tp3(ej)\win_64\linkedlist.h
 
-1559571753 c:\users\alumno\desktop\programacion1\programacion1\tp3(ej)\win_64\employee.h
+1559745493 c:\users\alumno\desktop\programacion1\programacion1\tp3(ej)\win_64\employee.h
+
+1559745493 source:c:\users\alumno\desktop\programacion1\programacion1\tp3(ej)\win_64\employee.c
+	<stdio.h>
+	"Employee.h"
+
+1559745493 source:c:\users\alumno\desktop\programacion1\programacion1\tp3(ej)\win_64\main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+
+1559745493 c:\users\alumno\desktop\programacion1\programacion1\tp3(ej)\win_64\controller.h
+
+1559745493 source:c:\users\alumno\desktop\programacion1\programacion1\tp3(ej)\win_64\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
 
